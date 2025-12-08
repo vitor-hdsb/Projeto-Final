@@ -68,21 +68,28 @@ button.secondary { background-color: #555; color: white; }
 
 /* Estilos do Quiz */
 .quiz-item {
+    display: flex;
     background: #2a2a2a;
     margin-bottom: 15px;
     padding: 15px;
     border-radius: 5px;
-    text-align: left;
+    text-align: center;
+    align-content: center;
+    justify-content: space-around;
 }
 
 .quiz-item p { font-weight: bold; color: #fff; }
 
 label {
-    display: block;
+    display: flex;
+    flex-direction: column;
     margin: 5px 0;
     cursor: pointer;
     padding: 5px;
     border-radius: 3px;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 label:hover { background: #333; }

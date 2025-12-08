@@ -83,6 +83,7 @@ function nextMission() {
         loadMission();
     } else {
         // Fim das missões, ir para o Quiz
+        document.getElementById('mission-screen').classList.remove('active');
         document.getElementById('mission-screen').classList.add('hidden');
         document.getElementById('quiz-screen').classList.remove('hidden');
         document.getElementById('quiz-screen').classList.add('active');
@@ -132,6 +133,7 @@ function submitQuiz() {
 }
 
 function showResult(finalScore) {
+    document.getElementById('quiz-screen').classList.remove('active');
     document.getElementById('quiz-screen').classList.add('hidden');
     document.getElementById('result-screen').classList.remove('hidden');
     document.getElementById('result-screen').classList.add('active');
@@ -149,8 +151,10 @@ function showResult(finalScore) {
 
 function restartQuiz() {
     // Reinicia apenas o quiz
+    document.getElementById('result-screen').classList.remove('active');
     document.getElementById('result-screen').classList.add('hidden');
     document.getElementById('quiz-screen').classList.remove('hidden');
+    document.getElementById('quiz-screen').classList.add('active');
     generateQuiz(); // Gera novas questões aleatórias
 }
 
@@ -166,6 +170,7 @@ function generateCertificate() {
     }
     
     document.getElementById('result-screen').classList.add('hidden');
+    document.getElementById('result-screen').classList.remove('active');
     document.getElementById('certificate-print').classList.remove('hidden');
     document.getElementById('certificate-print').classList.add('active');
     
