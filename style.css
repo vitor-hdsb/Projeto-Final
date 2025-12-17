@@ -67,6 +67,10 @@ button.secondary { background-color: #555; color: white; }
 }
 
 /* Estilos do Quiz */
+#quiz-screen{
+    max-width: 900px;
+}
+
 .quiz-item {
     display: flex;
     background: #2a2a2a;
@@ -89,7 +93,7 @@ label {
     border-radius: 3px;
     justify-content: center;
     align-items: center;
-    
+    width: 40%;
 }
 
 label:hover { background: #333; }

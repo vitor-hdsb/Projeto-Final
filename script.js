@@ -1,4 +1,4 @@
-// --- DADOS DO CURSO (MISSÕES) ---
+// DADOS DO CURSO
 const missions = [
     {
         title: "Fase 1: Ameaças Digitais",
@@ -31,8 +31,8 @@ const missions = [
     }
 ];
 
-// --- BANCO DE QUESTÕES (POOL) ---
-// Adicionei 15 questões para o sistema sortear 10 aleatórias
+// BANCO DE QUESTÕES
+// Adicionando 15 questões
 const questionPool = [
     { q: "Qual o principal objetivo da Segurança da Informação?", options: ["Proteger a confidencialidade, integridade e disponibilidade", "Apenas fazer backups", "Monitorar redes sociais"], a: 0 },
     { q: "O que é Phishing?", options: ["Um vírus de computador", "Uma técnica de fraude via e-mail/msg", "Um firewall"], a: 1 },
@@ -51,12 +51,12 @@ const questionPool = [
     { q: "Atualizações de sistema (Updates) servem para:", options: ["Mudar as cores da tela", "Corrigir vulnerabilidades de segurança", "Gastar internet"], a: 1 }
 ];
 
-// --- VARIÁVEIS DE CONTROLE ---
+// VARIÁVEIS DE CONTROLE
 let currentMission = 0;
 let selectedQuestions = [];
 let score = 0;
 
-// --- FUNÇÕES DE NAVEGAÇÃO ---
+// FUNÇÕES DE NAVEGAÇÃO
 
 function startTraining() {
     document.getElementById('home-screen').classList.add('hidden');
@@ -91,7 +91,7 @@ function nextMission() {
     }
 }
 
-// --- LÓGICA DO QUIZ ---
+// LÓGICA DO QUIZ
 
 function generateQuiz() {
     const container = document.getElementById('quiz-container');
@@ -158,7 +158,7 @@ function restartQuiz() {
     generateQuiz(); // Gera novas questões aleatórias
 }
 
-// --- GERAÇÃO DE CERTIFICADO ---
+// GERAÇÃO DE CERTIFICADO
 
 function generateCertificate() {
     const name = document.getElementById('user-name').value;
